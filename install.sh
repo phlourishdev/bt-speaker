@@ -5,9 +5,13 @@ set -e
 # OS: Raspbian GNU/Linux 10 (buster)
 # Model: Raspberry Pi 3 Model B Rev 1.2
 
+# This script has been tested again on 2024/06/28
+# OS: Raspbian GNU/Linux 12 (bookworm)
+# Model: Raspberry Pi 3 Model A+
+
 echo "Installing dependencies..."
 apt-get update
-apt-get --yes --force-yes install git bluez python3 python-gobject python3-cffi python3-dbus python3-alsaaudio python-configparser sound-theme-freedesktop vorbis-tools
+apt-get --yes --allow install git bluez python3 python3-cffi python3-dbus python3-alsaaudio sound-theme-freedesktop vorbis-tools
 echo "done."
 
 # Add btspeaker user if not exist already
